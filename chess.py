@@ -264,11 +264,7 @@ if __name__ == "__main__":
     rook = Rook("white", (4, 4))
     print(rook)
     print(rook.possible_moves())
-    
-    print("Queen")
-    queen = Queen("white", (4, 4))
-    print(queen)
-    print(len(queen.possible_moves()), "možných tahů")
+
     
     print("King")
     king = King("white", (4, 4))
