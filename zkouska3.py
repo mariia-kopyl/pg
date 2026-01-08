@@ -13,41 +13,36 @@
 # pip install pytest
 
 import math
-
 class Shape():
 
     def __init__(self, shape_name=None):
         self.shape_name = shape_name
-    
+   
     def __str__(self):
         return f'{self.shape_name} shape with area {self.area()}'
 
     def area(self):
         return 0.0
 
-class Rectangle(Shape): 
-    def __init__(self, width, height): 
-        super().__init__("Rectangle") 
-        self.width = width 
-        self.height = height 
-    
-    def area(self): 
-        return round(self.width * self.height, 1)
-    
-
-class Circle(Shape): 
-    def __init__(self, radius): 
-        super().__init__("Circle") 
-        self.radius = radius 
-    
-    def area(self): 
-        return round(math.pi * (self.radius ** 2), 1) 
-    
-    def __str__(self): 
-        return f"{self.shape_name} with a radius of {self.radius} has an area of {self.area()}"
-
 
 # ZDE NAPIŠTE VÁŠ KÓD
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        super().__init__("Rectangle")
+        self.width = width
+        self.height= height
+    def area(self):
+        return float(round(self.width * self.height, 1))
+   
+class Circle(Shape):
+    def __init__(self, radius):
+        super().__init__("Circle")
+        self.radius = radius
+    def area(self):
+        return float(round(math.pi * (self.radius ** 2), 1))
+    def __str__(self):
+        return f"{self.shape_name} shape with a radius of {self.radius} has an area of {self.area()}"
+
 
 
 from unittest.mock import patch, MagicMock, mock_open
@@ -65,8 +60,8 @@ def test_shapes():
 
 
 if __name__ == "__main__":
-    shape = Shape()
-    print(shape)
+    #shape = Shape()
+    #print(shape)
     rect = Rectangle(4, 5)
     print(rect)
     circle = Circle(3)
