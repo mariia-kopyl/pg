@@ -16,10 +16,10 @@ def process_numbers(numbers):
     # ZDE NAPIŠTE VÁŠ KÓD
     vysledek = []
     for cislo in numbers:
-        if type(cislo) not in (int, float):
-            break
-        if cislo > 5:
-            vysledek.append(cislo*2)
+        if type(cislo) not in (int, float): 
+            break 
+        if cislo > 5: 
+            vysledek.append(cislo*2) 
     return vysledek
 
 
